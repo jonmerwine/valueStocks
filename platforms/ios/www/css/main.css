@@ -1,0 +1,129 @@
+.modal .modal-body {
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+body {
+    padding-bottom: 0;
+}
+
+#loading {
+}
+
+.jumbotron{
+    background-color: #019875;
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+.back {
+    width: 100%;
+}
+
+.navbar{
+    background-color: #019875;
+}
+
+.navbar-brand{
+    color: #ffffff;
+}
+
+.icon-bar{
+    background-color: #ffffff;
+}
+
+li .active{
+    width: 100% !important;
+}
+
+.nav-pills>li.active>a {
+    background-color: #019875;
+    text-align: left;
+}
+
+.nav-pills>li+li {
+    margin: 0;
+}
+
+.carousel .item {
+    background-color: #019875;
+}
+
+button {
+    border-radius: 0 !important;
+}
+
+.carousel-caption {
+    top: 15%;
+    bottom: auto;
+    color: #019875 !important;
+    text-shadow: 0;
+    display: none;
+}
+
+.carousel {
+    margin-bottom: 0;
+}
+
+.btn-primary {
+    background-image: none;
+    border-color: #019875;
+    color: #019875;
+    background-color: white;
+}
+
+.btn-primary:active {
+    background-image: none;
+    border-color: #019875;
+    color: #019875;
+    background-color: #019875;
+}
+
+.btn-primary:focus {
+    background-image: none;
+    border-color: #019875;
+    color: #019875;
+    background-color: white;
+}
+
+.btn-primary:hover {
+    background-image: none;
+    border-color: #019875;
+    color: #019875;
+    background-color: white;
+}
+
+.slider-selection {
+    background-image: none !important;
+    background-color: #CCCCCC !important;
+}
+
+.slider-handle {
+    background-image: none !important;
+    background-color: #019875 !important;
+}
+
+@font-face {
+    font-family: 'App Font';
+    src: url(JosefinSans-Regular.ttf) format('truetype');
+}
+
+* {
+    font-family: 'App Font';
+}
+
+.row-tr:hover {
+    background-color: #019875;
+}
+
+.query-items{
+    width: 100%;
+}
+
+.form-horizontal{
+    width: 100% !important;
+    text-align: center;
+}

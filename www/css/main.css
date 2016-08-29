@@ -1,0 +1,133 @@
+.modal .modal-body {
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+body {
+    padding-bottom: 0;
+}
+
+#loading {
+}
+
+.jumbotron{
+    background-color: #1abc9c;
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+.back {
+    width: 100%;
+}
+
+.navbar{
+    background-color: #1abc9c;
+}
+
+.navbar-brand{
+    color: #ffffff;
+}
+
+.icon-bar{
+    background-color: #ffffff;
+}
+
+li .active{
+    width: 100% !important;
+}
+
+.nav-pills>li.active>a {
+    background-color: #1abc9c;
+    text-align: left;
+}
+
+.nav-pills>li+li {
+    margin: 0;
+}
+
+.carousel .item {
+    background-color: #1abc9c;
+}
+
+button {
+    border-radius: 0 !important;
+}
+
+.carousel-caption {
+    top: 15%;
+    bottom: auto;
+    color: #1abc9c !important;
+    text-shadow: 0;
+    display: none;
+}
+
+.carousel {
+    margin-bottom: 0;
+}
+
+.sliders {
+    //z-index: 1000;
+}
+
+.btn-primary {
+    background-image: none;
+    border-color: #1abc9c;
+    color: #1abc9c;
+    background-color: white;
+}
+
+.btn-primary:active {
+    background-image: none;
+    border-color: #1abc9c;
+    color: #1abc9c;
+    background-color: #1abc9c;
+}
+
+.btn-primary:focus {
+    background-image: none;
+    border-color: #1abc9c;
+    color: #1abc9c;
+    background-color: white;
+}
+
+.btn-primary:hover {
+    background-image: none;
+    border-color: #1abc9c;
+    color: #1abc9c;
+    background-color: white;
+}
+
+.slider-selection {
+    background-image: none !important;
+    background-color: #CCCCCC !important;
+}
+
+.slider-handle {
+    background-image: none !important;
+    background-color: #1abc9c !important;
+}
+
+@font-face {
+    font-family: 'App Font';
+    src: url(JosefinSans-Regular.ttf) format('truetype');
+}
+
+* {
+    font-family: 'App Font';
+}
+
+.row-tr:hover {
+    background-color: #1abc9c;
+}
+
+.query-items{
+    width: 100%;
+}
+
+.form-horizontal{
+    width: 100% !important;
+    text-align: center;
+}

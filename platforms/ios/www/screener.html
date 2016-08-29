@@ -1,0 +1,155 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap-slider.min.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-fixed-top" role="navigation">
+            <div class="container">
+                <br>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Value Stocks</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li class="active" ><a  href="index.html" role="button"><span class="glyphicon glyphicon-home">&nbsp;</span>Home</a></li>
+                        <li class="active" ><a  href="screener.html" role="button"><span class="glyphicon glyphicon-th">&nbsp;</span>Screener</a></li>
+                        <li class="active" ><a  href="stock_input.html" role="button"><span class="glyphicon glyphicon-signal">&nbsp;</span>Stock View</a></li>
+                    </ul><!--/.navbar-collapse -->
+                </div>
+            </div>
+        </nav>
+
+        <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-12 center" data-toggle="modal" data-target="#filter-modal" style="text-align: center; width: 100%;">
+                    <button id="filter" type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-plus">&nbsp;</span>Add Filter</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row" style="margin: 0; padding: 0;">
+                <div class="col-xs-6" style="text-align: center;margin: 0; padding: 0;">
+                    <button type="button" id="prev" class="btn btn-lg btn-primary" style="width:100%;"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;Prev</button>
+                </div>
+                <div class="col-xs-6" style="text-align: center;margin: 0; padding: 0;">
+                    <button type="button" id="next" class="btn btn-lg btn-primary" style="width:100%;">Next&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="table-responsive">
+                <table id="screen" class="table">
+                    <thead>
+                        <tr>
+                            <th class="symbol">Symbol</th>
+                            <th class="price">Price</th>
+                            <th class="graham_number">Graham #</th>
+                            <th class="eps_growth">EPS Growth</th>
+                            <th class="pe_ttm">P/E TTM</th>
+                            <th class="ncav">NCAV</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <hr>
+
+            <footer>
+                <div class="table-responsive">
+                    <table class="table">
+                        <tbody>
+                            <tr id="pages">
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </footer>
+
+            <!-- Modal -->
+            <div class="modal fade" id="filter-modal" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Filter Options</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" role="form">
+                                <label class="control-label col-sm-4" for="price">Price</label><div id="price-range"></div><input id="price" class="query-items"/>
+                            </form>
+
+                            <hr>
+
+                            <form class="form-horizontal" role="form">
+                                <label class="control-label col-sm-4" for="graham_number">Graham #</label><div id="graham_number-range"></div><input id="graham_number" class="query-items"/>
+                            </form>
+
+                            <hr>
+
+                            <form class="form-horizontal" role="form">
+                                <label class="control-label col-sm-4" for="eps_growth">EPS Growth</label><div id="eps_growth-range"></div><input id="eps_growth" class="query-items"/>
+                            </form>
+
+                            <hr>
+
+                            <form class="form-horizontal" role="form">
+                                <label class="control-label col-sm-4" for="pe_ttm">P/E TTM</label><div id="pe_ttm-range"></div><input id="pe_ttm" class="query-items"/>
+                            </form>
+
+                            <hr>
+
+                            <form class="form-horizontal" role="form">
+                                <label class="control-label col-sm-4" for="ncav">NCAV</label><div id="ncav-range"></div><input id="ncav" class="query-items"/>
+                            </form>
+
+                            <hr>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button id="submit" class="btn btn-primary back">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /container -->
+
+        <img id="loading" alt="" src="img/loader.gif" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/bootstrap-slider.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
